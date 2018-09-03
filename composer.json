@@ -25,6 +25,7 @@
         "zendframework/zendsearch": "dev-master",
         "algolia/algoliasearch-client-php": "^1.6",
         "league/glide-laravel": "^1.0.0",
+        "gd": "*",
         "league/csv": "^8.0"
     },
     "require-dev": {
