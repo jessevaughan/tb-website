@@ -1,0 +1,15 @@
+<section class="container-fluid">
+
+	<header>
+		<h1>{{ title }}</h1>
+		{{ content_raw wrap="h2" }}
+	</header>
+
+  <div class="tiles">
+    {{ collection:awards }}
+      <h3 class="caption">{{ title }}</h3>
+      <p>{{ content }}</p>
+    {{ /collection:awards }}
+  </div>
+
+</section>

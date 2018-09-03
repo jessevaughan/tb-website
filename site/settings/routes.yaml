@@ -1,10 +1,10 @@
 collections:
-  blog: '/blog/{year}/{month}/{day}/{slug}'
-  things: '/things/{slug}'
+  portfolio: '/portfolio/{year}/{month}/{day}/{slug}'
+  awards: '/things/{slug}'
 taxonomies:
-  tags: '/blog/tags/{slug}'
+  tags: '/portfolio/tags/{slug}'
 routes:
-  /blog/tags: blog/taxonomies
+  /portfolio/tags: portfolio/taxonomies
   /search: search
   /users: user/index
   /users/{username}: user/profile
@@ -13,11 +13,3 @@ routes:
   /register: auth/register
   /forgot-password: auth/password-forgot
   /reset-password: auth/password-reset
-  /blog/feed:
-    layout: feed
-    template: feeds/blog
-    content_type: atom
-  /things/feed:
-    layout: feed
-    template: feeds/things
-    content_type: atom

@@ -1,0 +1,6 @@
+title: News
+fieldset: news
+template: news
+order: numeric
+columns:
+  - title

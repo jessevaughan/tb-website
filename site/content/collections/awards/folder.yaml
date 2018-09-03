@@ -1,0 +1,6 @@
+title: Awards
+fieldset: awards
+template: award
+order: numeric
+columns:
+  - title

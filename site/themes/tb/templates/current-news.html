@@ -1,0 +1,15 @@
+<section class="container-fluid gallery">
+
+	<header>
+		<h1>{{ title }}</h1>
+		{{ content wrap="h2" }}
+	</header>
+
+	<div class="tiles">
+    {{ collection:news }}
+      <h3 class="caption">{{ title }}</h3>
+      <p>{{ content }}</p>
+    {{ /collection:news }}
+  </div>
+
+</section>

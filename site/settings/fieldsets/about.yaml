@@ -1,15 +1,27 @@
 title: About
 hide: true
 fields:
-  title:
-    type: text
-    width: 66
   slug:
     type: text
     width: 33
-  content:
-    type: markdown
-    display: Content
-  fun_facts:
+  header:
+    type: text
+    display: Header
+  sub_header:
+    type: text
+    display: Sub Header
+  intro:
+    type: redactor
+    display: Intro
+  reputation:
+    type: redactor
+    display: Reputation
+  client_list:
     type: list
-    display: Fun Facts
+    display: Client List
+  financial_stability:
+    type: redactor
+    display: Financial Stability
+  our_mission:
+    type: redactor
+    display: Our Mission
