@@ -1,0 +1,38 @@
+<footer>
+  <section class="footer-top">
+    <div class="container footer-sections">
+      <div class="row">
+        <div class="col_5">
+          <img class="logo" src="/assets/img/tuckman-barbee-logo-500.png">
+          <p>Since 1946, Tuckman-Barbee Construction Co., Inc has been quietly changing the streets of the Washington, DC metro area with award winning excellence in design-build, renovation and new construction.</p>
+        </div>
+        <div class="col_1">
+          &nbsp;
+        </div>
+        <div class="col_3">
+          <h4>Sitemap</h4>
+          <ul>
+            {{ nav from="/" include_home="false" scope="tag" }}
+            <li{{ if is_current or is_parent }} class="active" {{ /if }}><a href="{{ url }}">{{ tag:nav_title or title }}</a></li>
+            {{ /nav }}
+          </ul>
+        </div>
+        <div class="col_3">
+          <h4>Contact Us</h4>
+          <p>16000 Trade Zone Avenue<br>
+          Suite 102<br>
+          Upper Marlboro, MD 20774<br>
+          301-390-1700</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footer-bottom container">
+    <div class="row">
+      <div class="col_12">
+        <p>&copy; {{ now format="Y" }} Tuckman-Barbee Consturction Co., Inc.</p>
+      </div>
+    </div>
+  </section>
+</footer>
+

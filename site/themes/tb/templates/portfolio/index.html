@@ -6,13 +6,7 @@
 	</header>
 
 	<article class="list">
-		{{ collection:blog paginate="true" as="posts" limit="4" }}
-			{{ posts scope="tag" }}
-				{{ partial:block }}
-			{{ /posts }}
 
-			{{ partial:pagination }}
-		{{ /collection:blog }}
 	</article>
 
 </section>

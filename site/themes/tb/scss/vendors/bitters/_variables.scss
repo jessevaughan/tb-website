@@ -1,0 +1,94 @@
+// Typography
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,,600,700');
+@import url('https://fonts.googleapis.com/css?family=Lusitana:400,700');
+
+$base-font-family: 'Open Sans', sans-serif;
+$heading-font-family: 'Lusitana', serif;
+$heading-font-family-medium: 'Open Sans', sans-serif;
+$heading-font-family-bold: 'Open Sans', sans-serif;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.667;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 8px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Official Brand Colors
+//Primary
+$green: #b5fc7a;
+$teal: #00d4c3;
+$red: #ff1453;
+$blue: #00aeef;
+$black: #302d2e;
+$purple: #9327f5;
+
+
+//Secondary
+$dark-blue: #001b80;
+$yellow: #edfd66;
+$bright-blue: #56f6f7;
+$black: #000000;
+$text-black: #2D3137;
+$text-gray: #4C596C;
+$gray: #D8D8D8;
+$beige: #ffeac0;
+$white: #ffffff;
+$cyan: #57F5F7;
+
+//Secondary Percentages
+$black-75: #404040;
+$text-black-75: #2D3137;
+$gray-75: #E2E2E2;
+$beige-75: #F6F3F0;
+
+$black-50: #7F7F7F;
+$text-black-50: #A5ACB5;
+$gray-50: #EBEBEB;
+$beige-50: #F8F7F4;
+
+$black-25: #BFBFBF;
+$text-black-25: #D2D5DA;
+$gray-25: #F5F5F5;
+$beige-25: #FCFBFA;
+
+$gray-10: #798390;
+
+// Legacy Colors
+$dark-gray: $black-50;
+$medium-gray: $gray-50;
+$light-gray: #DBDDE1;
+$lightest-gray: $gray-10;
+$facebook: #44619A;
+$twitter: #22B9F0;
+$sendroll: #4AC291;
+$orange: #FF5E5B;
+$light-blue: #14E2FF;
+$off-white: #FBF5F3;
+
+// Font Colors
+$base-font-color: $text-black;
+$action-color: $blue;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(219, 221, 225, 1);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease-in-out;

@@ -1,0 +1,31 @@
+footer {
+  .footer-top {
+    background: #efeae8;
+    padding: 3em 0;
+    .footer-sections {
+      p {
+        margin: 15px 0 0;
+        font-size: .75em;
+      }
+      .logo {
+        max-width: 200px;
+      }
+      ul {
+        line-height: 1.75em;
+          a {
+          color: #2D3137;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    p {
+      font-size: .75em;
+      margin: 15px 0;
+      text-align: center;
+    }
+  }
+}

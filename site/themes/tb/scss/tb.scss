@@ -1,0 +1,22 @@
+// Reset
+@import "normalize";
+
+// Definings
+@import "mixins";
+
+//Vendors
+@import "vendors/bitters/grid-settings";
+@import "vendors/bitters/bitters";
+@import "vendors/neat/neat";
+
+// Core Elements
+@import "core/grid";
+@import "core/globals";
+@import "core/containers";
+
+// Components
+@import "components/nav";
+@import "components/footer";
+
+// Pages
+@import "pages/home";

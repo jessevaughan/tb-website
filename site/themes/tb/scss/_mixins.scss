@@ -1,0 +1,26 @@
+// Various Additional Mixins
+
+@mixin vertical-align {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+// Responsive support
+@mixin minWidth($width) {
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin maxWidth($width) {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin minMaxWidth($min, $max) {
+  @media (max-width:$max) and (min-width:$min) {
+    @content;
+  }
+}

@@ -1,0 +1,127 @@
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  margin: 0 0 .75em;
+  font-weight: 700;
+  /*line-height: 1.2;*/
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  margin: 0 0 .75em;
+  font-weight: 700;
+  /*line-height: 1.2;*/
+}
+
+p {
+  margin: 0 0 1.3em;
+  font-size: .9em;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: all $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.25em;
+  line-height: 1.4em;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+h3 {
+  font-size: 1.125em;
+  line-height: 1.5em;
+}
+
+h4 {
+  font-size: 1.3em;
+  line-height: 1.5;
+}
+
+small, .font_small {font-size: 0.8em;}
+
+.header-top {
+  margin-top: 0;
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+
+hr.thin {
+  height: .2px;
+  background: rgba(216, 216, 216, 1);
+  width: 100%;
+  margin: 0px 0px 2em;
+}
+
+hr.thick {
+  height: 8px;
+  width: 100%;
+  margin: 4em 0px;
+}
+
+hr.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr.gradient-teal-purple {
+  display: block;
+  width: 150px;
+  height: 4px;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  background: linear-gradient(to right, #13beca, #4287da, #7847ec);
+  border: none;
+  &.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+hr.gradient-teal-purple-thick {
+  display: block;
+  width: 100%;
+  height: 8px;
+  margin: 4em 0px;
+  background: linear-gradient(to right, #13beca, #4287da, #7847ec);
+  border: none;
+}
+
+
