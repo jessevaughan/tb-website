@@ -1,3 +1,6 @@
-order: date
-fieldset: post
-template: blog/post
+title: Portfolio
+fieldset: portfolio
+template: portfolio
+order: numeric
+columns:
+  - title

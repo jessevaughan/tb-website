@@ -1,0 +1,14 @@
+title: Portfolio
+fields:
+  title:
+    type: text
+    width: 66
+  slug:
+    type: text
+    width: 33
+  content:
+    type: redactor
+    display: Content
+  is_hidden:
+    type: toggle
+    display: Hide from navigation

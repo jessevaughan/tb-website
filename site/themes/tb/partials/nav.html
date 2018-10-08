@@ -2,9 +2,9 @@
   <div class="container">
     <div class="row">
       <div class="col_12 nav-wrap">
-        <h1 class="logo"><a href="{{ url }}"><img src="/assets/img/tuckman-barbee-logo-500.png"></a></h1>
+        <h1 class="logo"><a href="/"><img src="/assets/img/tuckman-barbee-logo-500.png"></a></h1>
         <ul class="main-nav">
-          {{ nav from="/" include_home="false" scope="tag" }}
+          {{ nav from="/" is_hidden:isnt="true" include_home="false" scope="tag" }}
           <li{{ if is_current or is_parent }} class="active" {{ /if }}><a href="{{ url }}">{{ tag:nav_title or title }}</a></li>
           {{ /nav }}
         </ul>

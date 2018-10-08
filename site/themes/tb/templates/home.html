@@ -1,42 +1,61 @@
-<section class="wrapper container" id="home-top">
-  
-  <div class="row">
-    <div class="col_12">
-      <h1>Tuckman-Barbee</h1>
-      <p>Since 1946, Tuckman-Barbee Construction Co., Inc has been quietly changing the streets of the Washington, DC metro area with award winning excellence in design-build, renovation and new construction.</p>
+<section style="background-size: cover; background-position: center;background-image: url({{ header }}{{ value }}{{ /header }}); position: relative;">
+
+  <div class="container" style="position: relative; z-index: 10; color: #fff; padding: 5em 0 5em;">
+    <div class="row">
+      <div class="col_6">
+        <h1 style="font-size: 3em;margin: 0 0 .25em;">Tuckman-Barbee</h1>
+        <p style="font-size: 1em;">Since 1946, Tuckman-Barbee Construction Co., Inc has been quietly changing the streets of the Washington, DC metro area with award winning excellence in design-build, renovation and new construction.</p>
+        <p><a class="cta" href="/contact">Contact Us</a></p>
+      </div>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col_12">
-      <h2>Testimonials</h2>
-      <p>“The contractor's quality control was outstanding. They were diligent about all three phases of control and their quality of workmanship was excellent. The final product was "awe" inspiring ...”</p>
-      <p>read more</p>
-      <p>Bert Taylor, Project Manager, Public Works Department Annapolis</p>
-      
-      <p>“Your careful planning, collaboration and cooperation with Georgetown, careful selection of subcontractors, strong organization, leadership and ...”</p>
-      <p>read more</p>
-      <p>Karen S. Frank, Executive Director, Georgetown University, Student Services and Facilities</p>
-      
-      <p>“I can speak for every member of the building committee and all the members of our congregation when I tell you we could not be more pleased with the final product. The attention to detail that was preformed by Tuckman-Barbee was outstanding ... ”</p>
-      <p>read more</p>
-      <p>Dona H. Collary, Director of Church Administration, Metropolitan Memorial United Methodist Church</p>
-      
-      <p>“It is indeed a pleasure to highly recommend Tuckman-Barbee for the admirable performance you demonstrated on these projects ..."</p>
-      <p>read more</p>
-      <p>George J. Lechner, AIA, Director of Planning and Architectural Services, Prince George’s County Public Schools</p>
-    </div>
-  </div>
-  
-  <!-- <div class="centered">{{ content }}</div> -->
+  <div class="home-overlay" style="display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: #000; opacity: .65; z-index: 9;"></div>
 
 </section>
 
-<section class="wrapper" id="home-portfolio">
+<section class="wrapper container" id="home-portfolio">
+  <div class="row">
+    <div class="col_12">
+      <h2>Portfolio</h2>
+    </div>
+  </div>
+  <div class="portfolio-slider">
+    {{ collection:portfolio }}
+    <div>
+      <a href="#">
+      <img style="width: 100%;" src="https://via.placeholder.com/350x250">
+      <h5>{{ title }}</h5>
+      </a>
+    </div>
+    {{ /collection:portfolio }}
+  </div>
+</section>
+
+<section class="wrapper" id="testimonials"  style="background: #EFEAE8;">
   <div class="container">
     <div class="row">
       <div class="col_12">
-        <p>testing</p>
+
+        <div class="slider">
+          <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
+          <input type="radio" name="slider" title="slide2" class="slider__nav"/>
+          <input type="radio" name="slider" title="slide3" class="slider__nav"/>
+          <input type="radio" name="slider" title="slide4" class="slider__nav"/>
+          <div class="slider__inner">
+
+            {{ collection:testimonials limit="4" }}
+            <div class="slider__contents">
+              {{ content | safe_truncate:225 }}...
+              <h5>-{{ name }}<br>
+              {{ position }}</h5>
+              <h5 style="margin: 0;"><a href="/testimonials">Read more</a></h5>
+            </div>
+            {{ /collection:testimonials }}
+
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -45,7 +64,31 @@
 <section class="wrapper container" id="home-news">
   <div class="row">
     <div class="col_12">
-      <p>testing</p>
+      <h2>News</h2>
+    </div>
+  </div>
+  <div class="row">
+    {{ collection:news limit="2" }}
+    <div class="col_5">
+      <h3>{{ title }}</h3>
+      {{ content }}
+    </div>
+    {{ /collection:news }}
+    <div class="col_2">
+      <h3><a href="/news">More News</a></h3>
     </div>
   </div>
 </section>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.portfolio-slider').slick({
+      infinite: false,
+      slidesToShow: 3,
+      slidesToScroll: 3
+    });
+  });
+</script>

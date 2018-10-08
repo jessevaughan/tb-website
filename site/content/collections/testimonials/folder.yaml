@@ -1,0 +1,6 @@
+title: Testimonias
+fieldset: testimonials
+template: testimonials
+order: numeric
+columns:
+  - title

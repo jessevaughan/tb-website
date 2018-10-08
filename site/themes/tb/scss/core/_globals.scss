@@ -1,2 +1,13 @@
 // Global styles.
 // ---------------------------------------
+
+// CTAs
+.cta {
+  display: inline-block;
+  background: #ccc;
+  padding: 15px 25px;
+  border-radius: 3px;
+  &:hover {
+    background: #666;
+  }
+}

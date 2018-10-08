@@ -1,5 +1,5 @@
 collections:
-  portfolio: '/portfolio/{year}/{month}/{day}/{slug}'
+  portfolio: '/portfolio/{slug}'
   awards: '/things/{slug}'
 taxonomies:
   tags: '/portfolio/tags/{slug}'
