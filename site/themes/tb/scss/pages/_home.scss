@@ -2,6 +2,26 @@
 
 #home-top {
   border-bottom: 2px solid #DCDCDC;
+  position: relative;
+  button {
+    position: absolute;
+    z-index: 15;
+    background: rgba(0,0,0,.85);
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    padding: 5px 15px;
+    top: 45%;
+    outline: none;
+    &.prev {
+      left: 0;
+      z-index: 21;
+    }
+    &.next {
+      right: 0;
+      z-index: 20;
+    }
+  }
 }
 
 #home-portfolio {
@@ -157,35 +177,46 @@ input.set {
   margin: 0 auto;
   position: relative;
   .home__contents {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    h2 {
+    position: relative;
+    background-color: #AAA498;
+    h3 {
       color: white;
-      font-size: calc(3rem - 1vw);
-      line-height: 1.25em;
-      margin: 0 0 .5em;
+      margin: 0;
+    }
+    .wrapper {
+      display: block;
+      background: rgba(0,0,0,0.4);
+      position: absolute;
+      bottom: 50px;
+      z-index: 10;
+      text-align: right;
+      a {
+        color: white;
+        &:hover {
+          color: darken( white, 25%);
+        }
+      }
     }
   }
   .wrapper {
-    padding: 3em 0;
+    padding: .5em 0;
     width: 100%;
+    .home-slide-wrap {
+      padding: 0 5em 0 2em;
+    }
   }
 }
 
 @media (min-width: 1025px) {
   #home-header-slide {
     .home__contents {
-      h2 {
-        font-size: 3em;
-        line-height: 1.25em;
-      }
+      height: 40vw;
     }
   }
 }
 
 #home-header-slide > div {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;

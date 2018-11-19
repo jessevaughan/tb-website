@@ -15,57 +15,47 @@
 
 </section>
 -->
+
 <section id="home-top">
-  <div id="home-header-slide" style="position: relative; background: #666; height: 40vw;">
+  <div id="home-header-slide" class="siema" style="position: relative; background: #666; height: 40vw;">
   
     <div class="home__contents" style="background-image: url('/assets/img/home-southern-regional.jpg'); background-size: cover; background-position: center bottom;">
-      <div class="wrapper container" style="position: relative; z-index: 10;">
-        <div class="row">
-          <div class="col_8">
-            <h2>Building with Expertise and Detail</h2>
-            <p><a class="cta" href="/portfolio">Portfolio</a></p>
-          </div>
+      <div class="wrapper">
+        <div class="home-slide-wrap">
+          <h3><a href="/portfolio">Building with Expertise and Detail <i class="fas fa-arrow-circle-right"></i></a></h3>
         </div>
       </div>
-      <div class="home-overlay"></div>
     </div>
     
     <div class="home__contents" style="background-image: url('/assets/img/home-giant-food.jpg'); background-size: cover; background-position: center center;">
-      <div class="wrapper container" style="position: relative; z-index: 10;">
-        <div class="row">
-          <div class="col_8">
-            <h2>Excellence in Construction Since 1946</h2>
-            <p><a class="cta" href="#">History</a></p>
-          </div>
+      <div class="wrapper">
+        <div class="home-slide-wrap">
+          <h3><a href="/company-profile">Excellence in Construction Since 1946 <i class="fas fa-arrow-circle-right"></i></a></h3>
         </div>
       </div>
-      <div class="home-overlay"></div>
     </div>
     
     <div class="home__contents" style="background-image: url('/assets/img/home-potomac.jpg'); background-size: cover; background-position: center center;">
-      <div class="wrapper container" style="position: relative; z-index: 10;">
-        <div class="row">
-          <div class="col_8">
-            <h2>Using Innovation and Technology To Increase Quality and Efficiency</h2>
-          </div>
+      <div class="wrapper">
+        <div class="home-slide-wrap">
+          <h3>Using Innovation and Technology To Increase Quality and Efficiency</h3>
         </div>
       </div>
-      <div class="home-overlay"></div>
     </div>
     
     <div class="home__contents" style="background-image: url('/assets/img/home-annapolis-visitors-center.jpg'); background-size: cover; background-position: center center;">
-      <div class="wrapper container" style="position: relative; z-index: 10;">
-        <div class="row">
-          <div class="col_8">
-            <h2>Building Lasting Relationships</h2>
-            <p><a class="cta" href="#">Testimonials</a></p>
-          </div>
+      <div class="wrapper">
+        <div class="home-slide-wrap">
+          <h3><a href="/testimonials">Building Lasting Relationships <i class="fas fa-arrow-circle-right"></i></a></h3>
         </div>
       </div>
-      <div class="home-overlay"></div>
     </div>
 
   </div>
+
+  <button class="prev"><i class="fas fa-arrow-left"></i></button>
+  <button class="next"><i class="fas fa-arrow-right"></i></button>
+
 </section>
 
 <section class="wrapper container" id="home-portfolio">
@@ -137,18 +127,17 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+<script src="/site/themes/tb/js/lib/siema.min.js"></script>
+<script>
+  const mySiema = new Siema({
+    draggable: false,
+    loop: true
+  });
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
 
-<script type="text/javascript">
-  $("#home-header-slide > div:gt(0)").hide();
-
-  setInterval(function() {
-    $('#home-header-slide > div:first')
-      .fadeOut(1000)
-      .next()
-      .fadeIn(1000)
-      .end()
-      .appendTo('#home-header-slide');
-  }, 7500);
+  prev.addEventListener('click', () => mySiema.prev());
+  next.addEventListener('click', () => mySiema.next());
 </script>
 
 <script type="text/javascript">
