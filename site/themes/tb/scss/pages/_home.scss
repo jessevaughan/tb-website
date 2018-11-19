@@ -1,13 +1,18 @@
 // Homepage Styles
 
-#home-top {}
+#home-top {
+  border-bottom: 2px solid #DCDCDC;
+}
 
-#home-portfolio {}
+#home-portfolio {
+}
 
 #home-news {}
 
 #testimonials {
   padding-top: 0;
+  border-top: 2px solid #DCDCDC;
+  border-bottom: 2px solid #DCDCDC;
 }
 
 input.set {
