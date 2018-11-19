@@ -1,26 +1,24 @@
 footer {
-  background: #4C5C68;
-  color: #ffffff;
   .footer-top {
-    background: #efeae8;
     color: $base-font-color;
     padding: 3em 0;
+    font-variant: small-caps;
+    font-family: $heading-font-family;
     .footer-sections {
       p {
         margin: 15px 0 0;
-        font-size: .75em;
+        font-size: .85em;
+        &.body-text {
+          font-family: $base-font-family;
+          font-variant: normal;
+          font-size: .75em;
+        }
       }
       .logo {
         max-width: 200px;
       }
       ul {
         line-height: 1.75em;
-          a {
-          color: #2D3137;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
       }
     }
   }

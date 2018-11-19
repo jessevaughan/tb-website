@@ -1,13 +1,37 @@
 // Global styles.
 // ---------------------------------------
 
+a {
+  color: #6F6C63;
+  font-weight: bold;
+  &:hover {
+    color: darken( #6F6C63, 25%);
+  }
+}
+
 // CTAs
 .cta {
   display: inline-block;
-  background: #ccc;
+  background: white;
   padding: 15px 25px;
   border-radius: 3px;
   &:hover {
-    background: #666;
+    background: darken( white, 25% );
   }
+}
+
+
+// Backgrounds
+.bkgd-texture-light {
+  background: #EFEAE8;
+  background-image: url('/assets/bkgd/texture-light.jpg');
+  background-position: center center;
+  background-repeat: repeat;
+}
+
+.bkgd-texture-dark {
+  background: #AAA498;
+  background-image: url('/assets/bkgd/texture-dark.jpg');
+  background-position: center center;
+  background-repeat: repeat;
 }
