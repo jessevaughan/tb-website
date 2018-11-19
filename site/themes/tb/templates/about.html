@@ -1,22 +1,28 @@
-<section class="regular">
+<section class="wrapper container">
 	
-	<header>
-		<h1>{{ header }}</h1>
-		{{ sub_title wrap="h2" }}
-	</header>
+  <div class="row">
+    <div class="col_12">
+      
+    	<header>
+    		<h1>{{ header }}</h1>
+    		{{ sub_title wrap="h2" }}
+    	</header>
 
-	<article class="content">
-    {{ intro }}
-    
-    <h2>Reputation</h2>
-		{{ reputation }}
-    {{ client_list | ul }}
+    	<article class="content">
+        {{ intro }}
+        
+        <h2>Reputation</h2>
+    		{{ reputation }}
+        {{ client_list | ul }}
 
-    <h2>Financial Stability</h2>
-    {{ financial_stability }}
+        <h2>Financial Stability</h2>
+        {{ financial_stability }}
 
-    <h3>Our Mission</h3>
-		{{ our_mission }}
-	</article>
+        <h3>Our Mission</h3>
+    		{{ our_mission }}
+    	</article>
+
+    </div>
+  </div>
 	
 </section>

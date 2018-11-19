@@ -1,15 +1,21 @@
-<section class="container-fluid gallery">
+<section class="wrapper container">
+  
+  <div class="row">
+    <div class="col_12">
 
-	<header>
-		<h1>{{ title }}</h1>
-		{{ content wrap="h2" }}
-	</header>
+    	<header>
+    		<h1>{{ title }}</h1>
+    		{{ content wrap="h2" }}
+    	</header>
 
-	<div class="tiles">
-    {{ collection:news }}
-      <h3 class="caption">{{ title }}</h3>
-      {{ content }}
-    {{ /collection:news }}
+    	<div class="tiles">
+        {{ collection:news }}
+          <h3 class="caption">{{ title }}</h3>
+          {{ content }}
+        {{ /collection:news }}
+      </div>
+
+    </div>
   </div>
 
 </section>
