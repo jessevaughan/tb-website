@@ -44,7 +44,7 @@ input.set {
 .slider {
   max-width: 1280px;
   margin: 0 auto;
-  height: 300px;
+  height: 350px;
   padding-bottom: 3em;
   position: relative;
   overflow: hidden;
@@ -116,7 +116,7 @@ input.set {
 }
 .slider__contents {
   height: 100%;
-  padding: 4.5em 4em 0em;
+  padding: 4.75em 9em 0em;
   text-align: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -233,4 +233,15 @@ input.set {
   background: #000;
   opacity: .60;
   z-index: 9;
+}
+
+.portfolio-slider {
+  div {
+    a {
+      p {
+        margin: 1em 0;
+        font-size: 12px;
+      }
+    }
+  }
 }

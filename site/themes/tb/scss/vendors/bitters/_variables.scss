@@ -92,3 +92,7 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Animations
 $base-duration: 150ms;
 $base-timing: ease-in-out;
+
+
+$bg: #0BAAD4;
+$hover: darken($bg, 10%);

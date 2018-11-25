@@ -3,6 +3,7 @@
   <div class="row">
     <div class="col_12">
       
+      <!--
     	<header>
     		<h1>{{ header }}</h1>
     		{{ sub_title wrap="h2" }}
@@ -18,9 +19,37 @@
         <h2>Financial Stability</h2>
         {{ financial_stability }}
 
-        <h3>Our Mission</h3>
+        <h2>Our Mission</h2>
     		{{ our_mission }}
     	</article>
+      -->
+
+      <section>
+        <h2>History</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, veritatis sit. Vero eaque veritatis deserunt fugiat animi quae officia eius doloremque nobis corrupti laboriosam, itaque nam veniam quia eligendi numquam!</p>
+      </section>
+
+      <hr class="decorative">
+
+      <section>
+        <h2>Leadership</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio placeat, harum earum quis ut consectetur numquam. Magnam, iusto quod velit laboriosam, fuga obcaecati placeat expedita commodi tempore. Laboriosam, dolore, sed!</p>
+      </section>
+
+      <hr class="decorative">
+
+      <section>
+        <h2>Awards</h2>
+      </section>
+
+      <div class="tiles">
+        {{ collection:awards }}
+          <h5 class="caption">{{ title }}</h5>
+          {{ content }}
+        {{ /collection:awards }}
+      </div>
 
     </div>
   </div>
