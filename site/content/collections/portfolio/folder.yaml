@@ -1,6 +1,6 @@
 title: Portfolio
 fieldset: portfolio
-template: portfolio
+template: portfolio/portfolio-detail
 order: numeric
 columns:
   - title

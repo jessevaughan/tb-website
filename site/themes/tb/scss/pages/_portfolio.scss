@@ -1,5 +1,47 @@
 // Portfolio
 
+#portfolio {
+  padding-top: 2.25em;
+
+  $portfolio-layout: (
+    columns: 12,
+    gutter: 20px,
+  );
+
+  $portfolio-content: (
+    columns: 10,
+    gutter: 20px,
+  );
+
+  .portfolio-layout {
+    @include grid-container;
+  }
+
+  .sidebar-layout__sidebar {
+    @include grid-column(2, $portfolio-layout);
+  }
+
+  .sidebar-layout__main {
+    @include grid-column(10, $portfolio-layout);
+  }
+
+  .portfolio-content {
+    @include grid-collapse($portfolio-content);
+    @include grid-container;
+  }
+
+  .portfolio-description{
+    @include grid-column(7, $portfolio-content);
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-details {
+    @include grid-column(3, $portfolio-content);
+    margin-bottom: 1rem;
+  }
+
+}
+
 /* ---- button ---- */
 
 .button {
@@ -104,4 +146,13 @@
 .element-item > * {
   margin: 0;
   padding: 0;
+}
+
+#portfolio-detail {
+  p {
+    font-size: 12px;
+    line-height: 21px;
+    font-variant: normal;
+    font-weight: normal;
+  }
 }
