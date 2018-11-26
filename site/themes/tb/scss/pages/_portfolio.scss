@@ -23,6 +23,61 @@
 
   .sidebar-layout__main {
     @include grid-column(10, $portfolio-layout);
+    .portfolio-content-wrap {
+      margin-bottom: 0;
+      position: relative;
+      #portfolio-slide {
+        margin: 0 auto;
+        position: relative;
+        .portfolio__contents {
+          position: relative;
+          background-color: #AAA498;
+          position: relative;
+          overflow:hidden;
+          img {
+            position: absolute;
+            top:-100%; left:0; right: 0; bottom:-100%;
+            margin: auto;
+          }
+        }
+      }
+
+      @media (min-width: 1025px) {
+        #portfolio-slide {
+          .portfolio__contents {
+            height: 45vw;
+          }
+        }
+      }
+
+      #portfolio-slide > div {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      button.prev, button.next {
+        position: absolute;
+        z-index: 15;
+        background: rgba(0,0,0,.85);
+        color: white;
+        border: none;
+        font-size: 1.5em;
+        padding: 5px 15px;
+        top: 45%;
+        outline: none;
+        transition: all $base-duration $base-timing;
+        &.prev {
+          left: 0;
+          z-index: 21;
+        }
+        &.next {
+          right: 0;
+          z-index: 20;
+        }
+      }
+    }
   }
 
   .portfolio-content {
@@ -126,7 +181,7 @@
     background-size: cover;
     position: relative;
     p {
-      opacity: 1;
+      opacity: 0;
       transition: .2s;
       text-shadow: 2px 2px 15px rgba(0, 0, 0, 1);
       position: absolute;
@@ -148,11 +203,40 @@
   padding: 0;
 }
 
-#portfolio-detail {
+.portfolio-details {
+  padding-top: 49px;
   p {
-    font-size: 12px;
     line-height: 21px;
     font-variant: normal;
     font-weight: normal;
   }
+}
+
+.dots {
+  position: relative;
+  bottom: 45px;
+  text-align: right;
+  right: 16px;
+}
+
+.dots__item {
+  width: 15px;
+  height: 15px;
+  margin: 0 .5rem;
+  border: 0;
+  background-color: white;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  transition: all $base-duration $base-timing;
+  opacity: .75;
+  &:hover {
+    background-color: #6F6C63;
+    opacity: 1;
+  }
+}
+
+.dots__item--active {
+  background: #6F6C63;
+  opacity: 1;
 }

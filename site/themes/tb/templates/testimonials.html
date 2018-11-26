@@ -1,26 +1,22 @@
-<section class="wrapper container">
+<section class="wrapper decor">
+  <div class="container">
 
-  <div class="row">
-    <div class="col_12">
-      <h2>Testimonials</h2>
-      <p>“The contractor's quality control was outstanding. They were diligent about all three phases of control and their quality of workmanship was excellent. The final product was "awe" inspiring ...”</p>
-      <p>read more</p>
-      <p>Bert Taylor, Project Manager, Public Works Department Annapolis</p>
-      
-      <p>“Your careful planning, collaboration and cooperation with Georgetown, careful selection of subcontractors, strong organization, leadership and ...”</p>
-      <p>read more</p>
-      <p>Karen S. Frank, Executive Director, Georgetown University, Student Services and Facilities</p>
-      
-      <p>“I can speak for every member of the building committee and all the members of our congregation when I tell you we could not be more pleased with the final product. The attention to detail that was preformed by Tuckman-Barbee was outstanding ... ”</p>
-      <p>read more</p>
-      <p>Dona H. Collary, Director of Church Administration, Metropolitan Memorial United Methodist Church</p>
-      
-      <p>“It is indeed a pleasure to highly recommend Tuckman-Barbee for the admirable performance you demonstrated on these projects ..."</p>
-      <p>read more</p>
-      <p>George J. Lechner, AIA, Director of Planning and Architectural Services, Prince George’s County Public Schools</p>
+    <div class="row">
+      <div class="col_12">
+        <h2>Testimonials</h2>
+
+        {{ collection:testimonials }}
+        <div class="">
+          {{ content }}
+          <h5>-{{ name }}<br>
+          {{ position }}</h5>
+        </div>
+        {{ /collection:testimonials }}
+
+      </div>
     </div>
-  </div>
-  
-  <!-- <div class="centered">{{ content }}</div> -->
+    
+    <!-- <div class="centered">{{ content }}</div> -->
 
+  </div>
 </section>

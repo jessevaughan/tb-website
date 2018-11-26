@@ -58,79 +58,81 @@
 
 </section>
 
-<section class="wrapper container" id="home-portfolio">
-  <div class="row">
-    <div class="col_12">
-      <h2>Portfolio</h2>
+<section class="wrapper decor" id="home-portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col_12">
+        <h2>Portfolio</h2>
+      </div>
     </div>
-  </div>
-  <div class="portfolio-slider">
-    <!--
-    {{ collection:portfolio }}
-    <div>
-      <a href="#">
-      <img src="https://via.placeholder.com/250x250">
-      <h5>{{ title }}</h5>
-      </a>
+    <div class="portfolio-slider">
+      <!--
+      {{ collection:portfolio }}
+      <div>
+        <a href="#">
+        <img src="https://via.placeholder.com/250x250">
+        <h5>{{ title }}</h5>
+        </a>
+      </div>
+      {{ /collection:portfolio }}
+      -->
+
+          <div class="">
+            <a href="">
+              <img src="/assets/img/portfolio/thumbs/500x500-aac-londontown.jpg" alt="">
+              <p>AAC Londontown</p>
+            </a>
+          </div>
+
+          <div class="">
+            <a href="">
+              <img src="/assets/img/portfolio/thumbs/500x500-aacps-north-county-gym.jpg" alt="">
+              <p>AACPS North County Gym</p>
+            </a>
+          </div>
+
+          <div class="">
+            <a href="">
+              <img src="/assets/img/portfolio/thumbs/500x500-annapolis-visitor-center.jpg" alt="">
+              <p>Annapolis Visitor Center</p>
+            </a>
+          </div>
+
+          <div class="">
+            <a href="">
+              <img src="/assets/img/portfolio/thumbs/500x500-calludet-univ-chapel-hall.jpg" alt="">
+              <p>Dept of State - Diplomatic security</p>
+            </a>
+          </div>
+
+          <div class="">
+            <a href="">
+              <img src="/assets/img/portfolio/thumbs/500x500-dept-of-state-diplomatic-security.jpg" alt="">
+              <p>Frederick Community College</p>
+            </a>
+          </div>
+
+          <div class="">
+            <a href="">
+              <img src="/assets/img/portfolio/thumbs/500x500-frederick-community-college.jpg" alt="">
+              <p>Galludet Univ - Chapel Hall</p>
+            </a>
+          </div>
+
+          <div class="">
+            <a href="">
+              <img src="/assets/img/portfolio/thumbs/500x500-georgetown-univ-carbarn.jpg" alt="">
+              <p>Georgetown Univ Carbarn</p>
+            </a>
+          </div>
+
+          <div class="">
+            <a href="">
+              <img src="/assets/img/portfolio/thumbs/500x500-loudoun-county-carver-center.jpg" alt="">
+              <p>Loudoun County - Carver Center</p>
+            </a>
+          </div>
     </div>
-    {{ /collection:portfolio }}
-    -->
-
-        <div class="">
-          <a href="">
-            <img src="/assets/img/portfolio/thumbs/500x500-aac-londontown.jpg" alt="">
-            <p>AAC Londontown</p>
-          </a>
-        </div>
-
-        <div class="">
-          <a href="">
-            <img src="/assets/img/portfolio/thumbs/500x500-aacps-north-county-gym.jpg" alt="">
-            <p>AACPS North County Gym</p>
-          </a>
-        </div>
-
-        <div class="">
-          <a href="">
-            <img src="/assets/img/portfolio/thumbs/500x500-annapolis-visitor-center.jpg" alt="">
-            <p>Annapolis Visitor Center</p>
-          </a>
-        </div>
-
-        <div class="">
-          <a href="">
-            <img src="/assets/img/portfolio/thumbs/500x500-calludet-univ-chapel-hall.jpg" alt="">
-            <p>Dept of State - Diplomatic security</p>
-          </a>
-        </div>
-
-        <div class="">
-          <a href="">
-            <img src="/assets/img/portfolio/thumbs/500x500-dept-of-state-diplomatic-security.jpg" alt="">
-            <p>Frederick Community College</p>
-          </a>
-        </div>
-
-        <div class="">
-          <a href="">
-            <img src="/assets/img/portfolio/thumbs/500x500-frederick-community-college.jpg" alt="">
-            <p>Galludet Univ - Chapel Hall</p>
-          </a>
-        </div>
-
-        <div class="">
-          <a href="">
-            <img src="/assets/img/portfolio/thumbs/500x500-georgetown-univ-carbarn.jpg" alt="">
-            <p>Georgetown Univ Carbarn</p>
-          </a>
-        </div>
-
-        <div class="">
-          <a href="">
-            <img src="/assets/img/portfolio/thumbs/500x500-loudoun-county-carver-center.jpg" alt="">
-            <p>Loudoun County - Carver Center</p>
-          </a>
-        </div>
   </div>
 </section>
 
@@ -163,26 +165,27 @@
   </div>
 </section>
 
-<section class="wrapper container" id="home-news">
-  <div class="row">
-    <div class="col_12">
-      <h2>News</h2>
+<section class="wrapper decor" id="home-news">
+  <div class="container">
+    <div class="row">
+      <div class="col_12">
+        <h2>News</h2>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    {{ collection:news limit="2" }}
-    <div class="col_5">
-      <h3>{{ title }}</h3>
-      {{ content }}
-    </div>
-    {{ /collection:news }}
-    <div class="col_2">
-      <h3><a href="/news">More News</a></h3>
+    <div class="row">
+      {{ collection:news limit="2" }}
+      <div class="col_5">
+        <h3>{{ title }}</h3>
+        {{ content }}
+      </div>
+      {{ /collection:news }}
+      <div class="col_2">
+        <h3><a href="/news">More News</a></h3>
+      </div>
     </div>
   </div>
 </section>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script src="/site/themes/tb/js/lib/siema.min.js"></script>

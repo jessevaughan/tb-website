@@ -9,3 +9,9 @@
 .wrapper {
   padding: 3em 0;
 }
+
+.decor {
+  background-image: url('/assets/decor/border-top-left.jpg'), url('/assets/decor/border-top-right.jpg'), url('/assets/decor/border-bottom-left.jpg'), url('/assets/decor/border-bottom-right.jpg');
+  background-repeat: no-repeat;
+  background-position: left top, right top, left bottom, right bottom;
+}
