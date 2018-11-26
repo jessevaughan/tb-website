@@ -191,6 +191,7 @@
 <script src="/site/themes/tb/js/lib/siema.min.js"></script>
 <script>
   const mySiema = new Siema({
+    duration: 1000,
     draggable: false,
     loop: true
   });
@@ -199,6 +200,8 @@
 
   prev.addEventListener('click', () => mySiema.prev());
   next.addEventListener('click', () => mySiema.next());
+
+  setInterval(() => mySiema.next(), 5000)
 </script>
 
 <script type="text/javascript">
