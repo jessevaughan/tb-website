@@ -16,7 +16,7 @@
 </section>
 -->
 
-<section id="home-top">
+<section id="home-top" data-paroller-factor="0" data-paroller-type="foreground" data-paroller-direction="vertical">
   <div id="home-header-slide" class="siema" style="position: relative; background: #666; height: 40vw;">
   
     <div class="home__contents" style="background-image: url('/assets/img/home-southern-regional.jpg'); background-size: cover; background-position: center bottom;">
@@ -211,5 +211,11 @@
       slidesToShow: 4,
       slidesToScroll: 4
     });
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#home-top').paroller();
   });
 </script>
