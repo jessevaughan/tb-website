@@ -10,6 +10,8 @@
 }
 
 .main-nav {
+  display: none;
+  flex: 1;
   a {
     padding: 15px;
     text-align: center;
@@ -44,17 +46,51 @@
   font-variant: small-caps;
   font-family: $heading-font-family;
   border-bottom: 2px solid #DCDCDC;
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .toggle {
+      text-align: right;
+      flex: 1;
+    }
+  }
+  #nav {
+    display: block;
+    font-size: 2em;
+  }
+}
+#desktop-nav {
+  display: none;
 }
 
+#mobile-nav {
+  display: block;
+}
 
 /* ================================= 
   Media Queries
 ==================================== */
 
 @media (min-width: 769px) {
+  #desktop-nav {
+    display: block;
+  }
+  #mobile-nav {
+    display: none;
+  }
+  .main-nav {
+    display: block;
+  }
+  .nav {
+    #nav {
+      display: none;
+    }
+  }
   .nav-wrap,
   .main-nav {
     display: flex;
+    justify-content: flex-end;
     list-style-type: none;
     padding: 0;
     margin: 0 0 0 20px;
@@ -79,3 +115,166 @@
   }
 
 }
+
+
+// Fonts
+$sidr-font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+$sidr-font-size: 15px;
+
+// Colors
+$sidr-background-shadow-color: #222;
+$sidr-text-color: #fff;
+$sidr-box-shadow-color: #333;
+$sidr-input-background-color: #333;
+
+// Width
+$sidebar-width: 260px;
+$sidebar-width-neg: -260px;
+
+.sidr {
+    // Default Settings
+    display: block;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 999999;
+    width: $sidebar-width;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .sidr-inner {
+      padding: 0 0 15px;
+      > p {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
+    &.right {
+      left: auto;
+      right: $sidebar-width-neg;
+    }
+    &.left {
+      left: $sidebar-width-neg;
+      right: auto;
+    }
+    font-family: $sidr-font-family;
+    font-size: $sidr-font-size;
+    background: $black;
+    color: $white;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: $sidr-font-size - 4;
+      font-weight: normal;
+      padding: 0 15px;
+      margin: 0 0 5px;
+      color: $sidr-text-color;
+      line-height: 24px;
+    }
+    p {
+      font-size: $sidr-font-size - 2;
+      margin: 0 0 12px;
+      a {
+        color: rgba($sidr-text-color, .9);
+      }
+    }
+    > p {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    ul {
+      display: block;
+      margin: 0 0 15px;
+      padding: 0;
+      li {
+        display: block;
+        margin: 0;
+        line-height: 48px;
+        &.try-it-out {
+          background: $red;
+        }
+        &:hover,
+        &.active,
+        &.sidr-class-active {
+          > a,
+          > span {
+          }
+        }
+        a,
+        span {
+          padding: 0 20px;
+          display: block;
+          text-decoration: none;
+          color: $sidr-text-color;
+        }
+        ul {
+          border-bottom: 0;
+          margin: 0;
+          li {
+            line-height: 40px;
+            font-size: $sidr-font-size - 2;
+            &:last-child {
+              border-bottom: 0;
+            }
+            &:hover,
+            &.active,
+            &.sidr-class-active {
+              > a,
+              > span {
+              }
+            }
+            a,
+            span {
+              color: rgba($sidr-text-color, .8);
+              padding-left: 35px;
+            }
+          }
+        }
+      }
+    }
+    form {
+      margin: 0 15px;
+    }
+    label {
+      font-size: $sidr-font-size - 2;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    textarea,
+    select {
+      width: 100%;
+      font-size: $sidr-font-size - 2;
+      padding: 5px;
+      box-sizing: border-box;
+      margin: 0 0 10px;
+      border-radius: 2px;
+      border: 0;
+      background: rgba($sidr-input-background-color, .1);
+      color: rgba($sidr-text-color, .6);
+      display: block;
+      clear: both;
+    }
+    input[type=checkbox] {
+      width: auto;
+      display: inline;
+      clear: none;
+    }
+    input[type=button],
+    input[type=submit] {
+      color: $dark-blue;
+      background: $sidr-text-color;
+      &:hover {
+        background: rgba($sidr-text-color, .9);
+      }
+    }
+  }

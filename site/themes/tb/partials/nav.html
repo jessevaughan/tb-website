@@ -1,13 +1,38 @@
-<nav class="nav bkgd-texture-light">
+<nav class="nav bkgd-texture-light" id="desktop-nav">
   <div class="container">
     <div class="row">
       <div class="col_12 nav-wrap">
-        <h1 class="logo"><a href="/"><img src="/assets/img/tuckman-barbee-logo-500.png"></a></h1>
-        <ul class="main-nav">
-          {{ nav from="/" is_hidden:isnt="true" include_home="false" scope="tag" }}
-          <li{{ if is_current or is_parent }} class="active" {{ /if }}><a href="{{ url }}">{{ tag:nav_title or title }}</a></li>
-          {{ /nav }}
-        </ul>
+        <div class="nav-wrapper">
+          <h1 class="logo"><a href="/"><img src="/assets/img/tuckman-barbee-logo-500.png"></a></h1>
+          <ul class="main-nav">
+            {{ nav from="/" is_hidden:isnt="true" include_home="false" scope="tag" }}
+            <li{{ if is_current or is_parent }} class="active" {{ /if }}><a href="{{ url }}">{{ tag:nav_title or title }}</a></li>
+            {{ /nav }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<nav class="nav bkgd-texture-light" id="mobile-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col_12 nav-wrap">
+        <div class="nav-wrapper">
+          <h1 class="logo"><a href="/"><img src="/assets/img/tuckman-barbee-logo-500.png"></a></h1>
+          <div class="toggle">
+            <a id="nav" href="#sidr"><i class="fas fa-bars"></i></a>
+          </div>
+          <div id="sidr">
+            <ul>
+              {{ nav from="/" is_hidden:isnt="true" include_home="false" scope="tag" }}
+              <li{{ if is_current or is_parent }} class="active" {{ /if }}><a href="{{ url }}">{{ tag:nav_title or title }}</a></li>
+              {{ /nav }}
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

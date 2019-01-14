@@ -17,6 +17,7 @@ footer {
       }
       .logo {
         max-width: 200px;
+        width: 100%;
       }
       ul {
         line-height: 1.75em;
@@ -24,6 +25,18 @@ footer {
         padding: 0;
         margin: 15px 0 0 0;
         font-size: 16px;
+      }
+      .footer-social {
+        margin-top: 15px;
+        ul {
+          display: flex;
+          li {
+            margin-right: 15px;
+            i {
+              font-size: 1.5em;
+            }
+          }
+        }
       }
     }
   }

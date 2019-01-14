@@ -116,7 +116,7 @@ input.set {
 }
 .slider__contents {
   height: 100%;
-  padding: 4.75em 9em 0em;
+  padding: 4.75em 1em 0em;
   text-align: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -244,4 +244,9 @@ input.set {
       }
     }
   }
+}
+
+
+@media (min-width: 769px) {
+  padding: 4.75em 9em 0em;
 }
