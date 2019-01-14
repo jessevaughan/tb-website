@@ -2,10 +2,22 @@ footer {
   border-top: 2px solid #DCDCDC;
   .footer-top {
     color: $base-font-color;
-    padding: 3em 0;
+    padding: 3em 0 .5em;
     font-variant: small-caps;
     font-family: $heading-font-family;
     .footer-sections {
+      .col_6 {
+          padding-right: 0;
+          @include grid-column(12);
+          text-align: center;
+        }
+        .col_3 {
+          @include grid-column(12);
+          text-align: center;
+          h4 {
+            margin-top: 25px;
+          }
+        }
       p {
         margin: 15px 0 0;
         font-size: .85em;
@@ -27,11 +39,13 @@ footer {
         font-size: 16px;
       }
       .footer-social {
-        margin-top: 15px;
+        margin-top: 25px;
         ul {
           display: flex;
+          max-width: 500px;
+          margin: 0 auto;
           li {
-            margin-right: 15px;
+            width: 100%;
             i {
               font-size: 1.5em;
             }
@@ -45,6 +59,37 @@ footer {
       font-size: .75em;
       margin: 15px 0;
       text-align: center;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  footer {
+    .footer-top {
+      padding: 3em 0;
+      .footer-sections {
+        .col_6 {
+          padding-right: 8em;
+          @include grid-column(6);
+          text-align: left;
+        }
+        .col_3 {
+          @include grid-column(3);
+          text-align: left;
+        }
+      }
+      .footer-social {
+        margin-top: 15px;
+        ul {
+          display: flex;
+          li {
+            margin-right: 15px;
+            i {
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
     }
   }
 }
