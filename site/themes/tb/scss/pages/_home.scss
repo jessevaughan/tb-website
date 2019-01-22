@@ -27,7 +27,19 @@
 #home-portfolio {
 }
 
-#home-news {}
+#home-news {
+  h3 {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1025px) {
+  #home-news {
+    h3 {
+      font-size: 1.5em;
+    }
+  }
+}
 
 #testimonials {
   padding-top: 0;
@@ -44,7 +56,7 @@ input.set {
 .slider {
   max-width: 1280px;
   margin: 0 auto;
-  height: 350px;
+  height: 375px;
   padding-bottom: 3em;
   position: relative;
   overflow: hidden;
@@ -64,6 +76,13 @@ input.set {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+@media (min-width: 768px) {
+  .slider {
+    height: 350px;
+  }
+}
+
 .slider__nav {
   width: 12px;
   height: 12px;
@@ -136,10 +155,31 @@ input.set {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
   p {
-    font-size: 1.25em;
+    font-size: 1em;
     font-variant: normal;
   }
+  h5 {
+    font-size: .75em;
+    a {
+      font-size: .75em;
+    }
+  }
 }
+
+@media (min-width: 768px) {
+  .slider__contents {
+    p {
+      font-size: 1.25em;
+    }
+    h5 {
+      font-size: 1em;
+      a {
+        font-size: 1em;
+      }
+    }
+  }
+}
+
 .slider__image {
   font-size: 2.7rem;
       color: #2196F3;
@@ -179,9 +219,11 @@ input.set {
   .home__contents {
     position: relative;
     background-color: #AAA498;
+    height: 40vw;
     h3 {
       color: white;
       margin: 0;
+      font-size: 1em;
     }
     .wrapper {
       display: block;
@@ -210,7 +252,10 @@ input.set {
 @media (min-width: 1025px) {
   #home-header-slide {
     .home__contents {
-      height: 40vw;
+      h3 {
+        font-size: 1.25em;
+        line-height: 1.5em;
+      }
     }
   }
 }
