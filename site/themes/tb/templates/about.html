@@ -1,4 +1,4 @@
-<header data-parallax="scroll" data-image-src="/assets/img/home-potomac.jpg" style="
+<header data-parallax="scroll" data-image-src="{{ header_image }}" style="
   width: 100%;
   height: 300px;">
 </header>
@@ -8,54 +8,45 @@
 	
     <div class="row">
       <div class="col_12">
-        
-        <!--
-      	<header>
-      		<h1>{{ header }}</h1>
-      		{{ sub_title wrap="h2" }}
-      	</header>
 
-      	<article class="content">
-          {{ intro }}
-          
-          <h2>Reputation</h2>
-      		{{ reputation }}
-          {{ client_list | ul }}
+        <header>
+          <h1>{{ header }}</h1>
+          {{ sub_title wrap="h2" }}
+        </header>
 
-          <h2>Financial Stability</h2>
-          {{ financial_stability }}
+        <article class="content">
+          <hr class="decorative">
+          {{ header_one wrap="h2" }}
+          {{ section_one }}
 
-          <h2>Our Mission</h2>
-      		{{ our_mission }}
-      	</article>
-        -->
+          {{ if section_two_toggle }}
+          <hr class="decorative">
+          {{ header_two wrap="h2" }}
+          {{ section_two }}
+          {{ /if }}
 
-        <section>
-          <h2>History</h2>
+          {{ if section_three_toggle }}
+          <hr class="decorative">
+          {{ header_three wrap="h2" }}
+          {{ section_three }}
+          {{ /if }}
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, veritatis sit. Vero eaque veritatis deserunt fugiat animi quae officia eius doloremque nobis corrupti laboriosam, itaque nam veniam quia eligendi numquam!</p>
-        </section>
+          {{ if section_four_toggle }}
+          <hr class="decorative">
+          {{ header_four wrap="h2" }}
+          {{ section_four }}
+          {{ /if }}
 
-        <hr class="decorative">
-
-        <section>
-          <h2>Leadership</h2>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio placeat, harum earum quis ut consectetur numquam. Magnam, iusto quod velit laboriosam, fuga obcaecati placeat expedita commodi tempore. Laboriosam, dolore, sed!</p>
-        </section>
-
-        <hr class="decorative">
-
-        <section>
+          <hr class="decorative">
           <h2>Awards</h2>
-        </section>
+          <div class="tiles">
+            {{ collection:awards }}
+              <h5 class="caption">{{ title }}</h5>
+              {{ content }}
+            {{ /collection:awards }}
+          </div>
 
-        <div class="tiles">
-          {{ collection:awards }}
-            <h5 class="caption">{{ title }}</h5>
-            {{ content }}
-          {{ /collection:awards }}
-        </div>
+        </article>
 
       </div>
     </div>

@@ -1,6 +1,13 @@
-title: About
+title: Company Profile
 hide: true
 fields:
+  header_image:
+    type: assets
+    container: page_headers
+    max_files: 1
+  title:
+    type: text
+    width: 66
   slug:
     type: text
     width: 33
@@ -10,18 +17,36 @@ fields:
   sub_header:
     type: text
     display: Sub Header
-  intro:
+  header_one:
+    type: text
+    display: Header One
+  section_one:
     type: redactor
-    display: Intro
-  reputation:
+    display: Section One
+  section_two_toggle:
+    type: toggle
+    display: Section Two
+  header_two:
+    type: text
+    display: Header Two
+  section_two:
     type: redactor
-    display: Reputation
-  client_list:
-    type: list
-    display: Client List
-  financial_stability:
+    display: Section Two
+  section_three_toggle:
+    type: toggle
+    display: Section Three
+  header_three:
+    type: text
+    display: Header Three
+  section_three:
     type: redactor
-    display: Financial Stability
-  our_mission:
+    display: Section Three
+  section_four_toggle:
+    type: toggle
+    display: Section Four
+  header_four:
+    type: text
+    display: Header Four
+  section_four:
     type: redactor
-    display: Our Mission
+    display: Section Four

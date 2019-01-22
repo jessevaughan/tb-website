@@ -1,7 +1,9 @@
-title: Testimonials
+title: Secondary Page
 fields:
-  header:
+  header_image:
     type: assets
+    container: page_headers
+    max_files: 1
   title:
     type: text
     width: 66
@@ -11,6 +13,3 @@ fields:
   content:
     type: redactor
     display: Content
-  is_hidden:
-    type: toggle
-    display: Hide from navigation
