@@ -12,14 +12,9 @@
         <div class="button-group-wrap">
           <div class="button-group filter-button-group">
             <button class="button" onclick="location.href='/portfolio#filter=.all';">View All</button>
-            <button class="button" onclick="location.href='/portfolio#filter=.educational';">Educational</button>
-            <button class="button" onclick="location.href='/portfolio#filter=.commercial';">Commercial</button>
-            <button class="button" onclick="location.href='/portfolio#filter=.government';">Government</button>
-            <button class="button" onclick="location.href='/portfolio#filter=.historic';">Historic</button>
-            <button class="button" onclick="location.href='/portfolio#filter=.healthcare';">Healthcare</button>
-            <button class="button" onclick="location.href='/portfolio#filter=.institutional';">Institutional</button>
-            <button class="button" onclick="location.href='/portfolio#filter=.residential';">Residential</button>
-            <button class="button" onclick="location.href='/portfolio#filter=.other';">Other Projects</button>
+            {{ taxonomy:listing from="tags" sort="tags" }}
+            <button class="button" data-filter=".{{ title | lower }}">{{ title | title }}</button>
+            {{ /taxonomy:listing }}
           </div>
         </div>
       </div>
@@ -73,5 +68,5 @@
   </div>
 </section>
 
-<script src="/site/themes/tb/js/lib/siema.min.js"></script>
-<script src="/site/themes/tb/js/lib/portfolio-detail.js"></script>
+<script src="/site/themes/tb/js/siema.min.js"></script>
+<script src="/site/themes/tb/js/portfolio-detail.js"></script>

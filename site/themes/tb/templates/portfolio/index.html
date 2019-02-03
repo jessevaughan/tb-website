@@ -5,7 +5,7 @@
       <div class="col_12">
 
       	<header>
-      		<h1>Portfolio</h1>
+      		<h1>{{ title }}</h1>
       	</header>
 
       </div>
@@ -18,15 +18,9 @@
         <div class="button-group-wrap">
           <div class="button-group filter-button-group">
             <button class="button is-checked" data-filter=".all">View All</button>
-            <button class="button" data-filter=".educational">Educational</button>
-            <button class="button" data-filter=".commercial">Commercial</button>
-            <button class="button" data-filter=".government">Government</button>
-            <button class="button" data-filter=".historic">Historic</button>
-            <button class="button" data-filter=".healthcare">Healthcare</button>
-            <button class="button" data-filter=".institutional">Institutional</button>
-            <button class="button" data-filter=".residential">Residential</button>
-            <button class="button" data-filter=".community">Community</button>
-            <button class="button" data-filter=".other">Other Projects</button>
+            {{ taxonomy:listing from="tags" sort="tags" }}
+            <button class="button" data-filter=".{{ title | lower }}">{{ title | title }}</button>
+            {{ /taxonomy:listing }}
           </div>
         </div>
 
@@ -36,61 +30,11 @@
         
         <div class="grid">
 
-          <div class="element-item government all">
-            <a href="/portfolio/aac-londontown" style="background-image: url('/assets/img/portfolio/thumbs/500x500-aac-londontown.jpg')";><p>AAC Londontown</p></a>
+          {{ collection:portfolio }}
+          <div class="element-item {{ tags }}{{ title }}{{ /tags }} all">
+            <a href="{{ url }}" style="background-image: url('{{ portfolio_thumbnail }}');"><p>{{ title }}</p></a>
           </div>
-
-          <div class="element-item educational all">
-            <a href="" style="background-image: url('/assets/img/portfolio/thumbs/500x500-aacps-north-county-gym.jpg')";><p>AACPS North County Gym</p></a>
-          </div>
-
-          <div class="element-item government all">
-            <a href="" style="background-image: url('/assets/img/portfolio/thumbs/500x500-annapolis-visitor-center.jpg')";><p>Annapolis Visitor Center</p></a>
-          </div>
-
-          <div class="element-item government all">
-            <a href="" style="background-image: url('/assets/img/portfolio/thumbs/500x500-calludet-univ-chapel-hall.jpg')";><p>Dept of State - Diplomatic security</p></a>
-          </div>
-
-          <div class="element-item educational all">
-            <a href="" style="background-image: url('/assets/img/portfolio/thumbs/500x500-dept-of-state-diplomatic-security.jpg')";><p>Frederick Community College</p></a>
-          </div>
-
-          <div class="element-item educational all">
-            <a href="" style="background-image: url('/assets/img/portfolio/thumbs/500x500-frederick-community-college.jpg')";><p>Galludet Univ - Chapel Hall</p></a>
-          </div>
-
-          <div class="element-item educational all">
-            <a href="" style="background-image: url('/assets/img/portfolio/thumbs/500x500-georgetown-univ-carbarn.jpg')";><p>Georgetown Univ Carbarn</p></a>
-          </div>
-
-          <div class="element-item government all">
-            <a href="" style="background-image: url('/assets/img/portfolio/thumbs/500x500-loudoun-county-carver-center.jpg')";><p>Loudoun County - Carver Center</p></a>
-          </div>
-
-          <div class="element-item community all">
-            <a href="" style="background-image: url('/assets/img/portfolio/thumbs/500x500-mncppc-southern-regional-tech-center.jpg')";><p>MNCPPC - Southern Regional Tech Center</p></a>
-          </div>
-
-          <div class="element-item government all">
-            <a href="" style="background-image: url('/assets/img/portfolio/thumbs/500x500-navy-211-navy-yard.jpg')";><p>Navy - Bld#211 Navy Yard</p></a>
-          </div>
-
-          <div class="element-item educational all">
-            <a href="" style="background-image: url('/assets/img/portfolio/thumbs/500x500-pgcps-potomac.jpg')";><p>PGCPS - Potomac</p></a>
-          </div>
-
-          <div class="element-item educational all">
-            <a href="" style="background-image: url('/assets/img/portfolio/thumbs/500x500-pgcps-suitland.jpg')";><p>PGCPS - Suitland</p></a>
-          </div>
-
-          <div class="element-item government all">
-            <a href="" style="background-image: url('/assets/img/portfolio/thumbs/500x500-usna-buchanan-house.jpg')";><p>USNA - Buchanan House</p></a>
-          </div>
-
-          <div class="element-item commercial historic healthcare institutional residential other no-results">
-            <p>No Results</p>
-          </div>
+          {{ /collection:portfolio }}
           
         </div>
 
@@ -101,4 +45,4 @@
   </div>
 </section>
 
-<script src="/site/themes/tb/js/lib/portfolio.js" type="text/javascript"></script>
+<script src="/site/themes/tb/js/portfolio.js" type="text/javascript"></script>

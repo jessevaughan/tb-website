@@ -17,8 +17,8 @@
 -->
 
 <section id="home-top" data-paroller-factor="0" data-paroller-type="foreground" data-paroller-direction="vertical">
-  <div id="home-header-slide" class="siema" style="position: relative; background: #666; height: 40vw;">
 
+  <div id="home-header-slide" class="siema" style="position: relative; background: #666; height: 40vw;">
     {{ home_image_slider }}
     <div class="home__contents" style="background-image: url('/{{ photo }}'); background-size: cover; background-position: center center;">
       <div class="wrapper">
@@ -28,35 +28,6 @@
       </div>
     </div>
     {{ /home_image_slider }}
-  
-  <!--
-    
-    
-    <div class="home__contents" style="background-image: url('/assets/img/home-giant-food.jpg'); background-size: cover; background-position: center center;">
-      <div class="wrapper">
-        <div class="home-slide-wrap">
-          <h3><a href="/company-profile">Excellence in Construction Since 1946 <i class="fas fa-arrow-circle-right"></i></a></h3>
-        </div>
-      </div>
-    </div>
-    
-    <div class="home__contents" style="background-image: url('/assets/img/home-potomac.jpg'); background-size: cover; background-position: center center;">
-      <div class="wrapper">
-        <div class="home-slide-wrap">
-          <h3>Using Innovation and Technology To Increase Quality and Efficiency</h3>
-        </div>
-      </div>
-    </div>
-    
-    <div class="home__contents" style="background-image: url('/assets/img/home-annapolis-visitors-center.jpg'); background-size: cover; background-position: center center;">
-      <div class="wrapper">
-        <div class="home-slide-wrap">
-          <h3><a href="/testimonials">Building Lasting Relationships <i class="fas fa-arrow-circle-right"></i></a></h3>
-        </div>
-      </div>
-    </div>
-  -->
-
   </div>
 
   <button class="prev"><i class="fas fa-arrow-left"></i></button>
@@ -72,72 +43,16 @@
       </div>
     </div>
     <div class="portfolio-slider">
-      <!--
-      {{ collection:portfolio }}
+
+      {{ collection:portfolio limit="8" }}
       <div>
-        <a href="#">
-        <img src="https://via.placeholder.com/250x250">
-        <h5>{{ title }}</h5>
+        <a href="{{ url }}">
+        <img src="{{ portfolio_thumbnail }}">
+        <p>{{ title }}</p>
         </a>
       </div>
       {{ /collection:portfolio }}
-      -->
-
-          <div class="">
-            <a href="">
-              <img src="/assets/img/portfolio/thumbs/500x500-aac-londontown.jpg" alt="">
-              <p>AAC Londontown</p>
-            </a>
-          </div>
-
-          <div class="">
-            <a href="">
-              <img src="/assets/img/portfolio/thumbs/500x500-aacps-north-county-gym.jpg" alt="">
-              <p>AACPS North County Gym</p>
-            </a>
-          </div>
-
-          <div class="">
-            <a href="">
-              <img src="/assets/img/portfolio/thumbs/500x500-annapolis-visitor-center.jpg" alt="">
-              <p>Annapolis Visitor Center</p>
-            </a>
-          </div>
-
-          <div class="">
-            <a href="">
-              <img src="/assets/img/portfolio/thumbs/500x500-calludet-univ-chapel-hall.jpg" alt="">
-              <p>Dept of State - Diplomatic security</p>
-            </a>
-          </div>
-
-          <div class="">
-            <a href="">
-              <img src="/assets/img/portfolio/thumbs/500x500-dept-of-state-diplomatic-security.jpg" alt="">
-              <p>Frederick Community College</p>
-            </a>
-          </div>
-
-          <div class="">
-            <a href="">
-              <img src="/assets/img/portfolio/thumbs/500x500-frederick-community-college.jpg" alt="">
-              <p>Galludet Univ - Chapel Hall</p>
-            </a>
-          </div>
-
-          <div class="">
-            <a href="">
-              <img src="/assets/img/portfolio/thumbs/500x500-georgetown-univ-carbarn.jpg" alt="">
-              <p>Georgetown Univ Carbarn</p>
-            </a>
-          </div>
-
-          <div class="">
-            <a href="">
-              <img src="/assets/img/portfolio/thumbs/500x500-loudoun-county-carver-center.jpg" alt="">
-              <p>Loudoun County - Carver Center</p>
-            </a>
-          </div>
+      
     </div>
   </div>
 </section>

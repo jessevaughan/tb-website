@@ -6,9 +6,10 @@ fields:
   slug:
     type: text
     width: 33
-  content:
-    type: redactor
-    display: Content
-  is_hidden:
-    type: toggle
-    display: Hide from navigation
+  tags:
+    type: taxonomy
+    taxonomy: tags
+  portfolio_thumbnail:
+    type: assets
+    container: portfolio
+    max_files: 1
