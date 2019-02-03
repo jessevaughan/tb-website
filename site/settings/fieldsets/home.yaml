@@ -1,8 +1,17 @@
 hide: true
 fields:
-  posts:
-    type: integer
-    display: Number of Posts
-    width: 25
-  content:
-    type: markdown
+  home_image_slider:
+    type: replicator
+    display: Replicator
+    sets:
+      image:
+        display: Homepage Image
+        fields:
+          photo:
+            type: assets
+            container: page_headers
+            max_files: 1
+          caption:
+            type: text
+          link:
+            type: text

@@ -18,14 +18,19 @@
 
 <section id="home-top" data-paroller-factor="0" data-paroller-type="foreground" data-paroller-direction="vertical">
   <div id="home-header-slide" class="siema" style="position: relative; background: #666; height: 40vw;">
-  
-    <div class="home__contents" style="background-image: url('/assets/img/home-southern-regional.jpg'); background-size: cover; background-position: center bottom;">
+
+    {{ home_image_slider }}
+    <div class="home__contents" style="background-image: url('/{{ photo }}'); background-size: cover; background-position: center center;">
       <div class="wrapper">
         <div class="home-slide-wrap">
-          <h3><a href="/portfolio">Building with Expertise and Detail <i class="fas fa-arrow-circle-right"></i></a></h3>
+          <h3>{{ if link }}<a href="{{ link }}">{{ caption }} <i class="fas fa-arrow-circle-right"></i></a>{{ else }}{{ caption }}{{ /if }}</h3>
         </div>
       </div>
     </div>
+    {{ /home_image_slider }}
+  
+  <!--
+    
     
     <div class="home__contents" style="background-image: url('/assets/img/home-giant-food.jpg'); background-size: cover; background-position: center center;">
       <div class="wrapper">
@@ -50,6 +55,7 @@
         </div>
       </div>
     </div>
+  -->
 
   </div>
 
@@ -201,7 +207,7 @@
   prev.addEventListener('click', () => mySiema.prev());
   next.addEventListener('click', () => mySiema.next());
 
-  setInterval(() => mySiema.next(), 5000)
+  setInterval(() => mySiema.next(), 7500)
 </script>
 
 <script type="text/javascript">
