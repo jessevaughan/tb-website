@@ -2,3 +2,6 @@ path: assets/headers
 url: assets/headers
 title: 'Page Headers'
 fieldset: secondary_page
+assets:
+  home-southern-regional.jpg:
+    title: 'Building with Expertise and Detail'
