@@ -22,26 +22,12 @@
         <div class="portfolio-content-wrap">
 
           <div id="portfolio-slide" class="siema">
-  
-            <div class="portfolio__contents">
-              <img src="/assets/img/portfolio/aac-londontown-01.jpg">
-            </div>
-            
-            <div class="portfolio__contents">
-              <img src="/assets/img/portfolio/aac-londontown-02.jpg">
-            </div>
 
+            {{ portfolio_image_slider }}
             <div class="portfolio__contents">
-              <img src="/assets/img/portfolio/aac-londontown-03.jpg">
+              <img src="/{{ value }}">
             </div>
-
-            <div class="portfolio__contents">
-              <img src="/assets/img/portfolio/aac-londontown-04.jpg">
-            </div>
-
-            <div class="portfolio__contents">
-              <img src="/assets/img/portfolio/aac-londontown-05.jpg">
-            </div>
+            {{ /portfolio_image_slider }}
 
           </div>
 
@@ -53,15 +39,19 @@
         </div>
         <div class="portfolio-description">
           <h2>{{ title }}</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt totam, sint nulla provident, saepe vel voluptatibus animi magni! Quos expedita temporibus quas tenetur provident ea adipisci aliquid iusto quia.</p>
+          {{ summary }}
         </div>
         <div class="portfolio-details">
-          <p><b>Location:</b> Lorem ipsum dolor sit amet.<br>
-            <b>Owner:</b> Lorem ipsum dolor sit amet.<br>
-            <b>Architect:</b> Lorem ipsum dolor sit amet.<br>
-            <b>Schedule:</b> Lorem ipsum dolor sit amet.<br>
-            <b>Size:</b> Lorem ipsum dolor sit amet.<br>
-            <b>Description:</b> Lorem ipsum dolor sit amet.</p>
+          <p>
+          {{ project_details }}
+          {{ if location }}<b>Location:</b> {{ location }}<br>{{ else }}{{ /if }}
+          {{ if owner }}<b>Owner:</b> {{ owner }}<br>{{ else }}{{ /if }}
+          {{ if architect }}<b>Architect:</b> {{ architect }}<br>{{ else }}{{ /if }}
+          {{ if schedule }}<b>Schedule:</b> {{ schedule }}<br>{{ else }}{{ /if }}
+          {{ if size }}<b>Size:</b> {{ size }}<br>{{ else }}{{ /if }}
+          {{ if description }}<b>Description:</b> {{ description }}{{ else }}{{ /if }}
+          {{ /project_details }}
+          </p>
         </div>
       </div>
     </div>

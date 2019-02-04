@@ -13,3 +13,18 @@ fields:
     type: assets
     container: portfolio
     max_files: 1
+  portfolio_image_slider:
+    type: assets
+    container: portfolio
+  summary:
+    type: redactor
+    display: Project Summary
+  project_details:
+    type: array
+    keys:
+      location: Location
+      owner: Owner
+      architect: Architect
+      schedule: Schedule
+      size: Size
+      description: Description
