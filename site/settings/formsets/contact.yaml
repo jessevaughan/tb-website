@@ -1,4 +1,4 @@
-title: Contact Me
+title: Contact Us
 
 fields:
   name:
@@ -20,12 +20,3 @@ metrics:
   -
     type: total
     label: Total Responses
-  -
-    type: sum
-    field: number
-    label: Sum of Favorite Number
-  -
-    type: average
-    field: number
-    label: Average Favorite Number
-    precision: 1
