@@ -1,5 +1,9 @@
 title: News
 fields:
+  header_image:
+    type: assets
+    container: page_headers
+    max_files: 1
   title:
     type: text
     width: 66
