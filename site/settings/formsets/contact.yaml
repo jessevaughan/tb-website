@@ -4,12 +4,15 @@ fields:
   name:
     display: Name
     validate: required|min:2
+  company:
+    display: Company
+    validate: required|min:2
   email:
     display: Email Address
     validate: required|email
-  number:
-    display: Favorite Number
-    validate: integer
+  phone:
+    display: Phone
+    validate: required|numeric
   comment:
     display: Comment
 
