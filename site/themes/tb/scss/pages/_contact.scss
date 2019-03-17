@@ -1,0 +1,40 @@
+// Contact Form
+
+#contact-form {
+  form {
+    .alert {
+      padding: 10px 15px;
+      font-size: 14px;
+      border-radius: 5px;
+      width: auto;
+      display: inline-block;
+      margin: 0 0 15px 0;
+      color: white;
+      font-weight: bold;
+      &.alert.alert-danger {
+        background: #f06560;
+      }
+      &.alert.alert-success {
+        background: #3c9a30;
+      }
+    }
+    .form-group {
+      margin: 10px 0;
+    }
+    label {
+      min-width: 100px;
+      display: block;
+      float: left;
+    }
+    input {
+      width: 225px;
+    }
+    textarea {
+      width: 225px;
+      height: 100px;
+    }
+    button {
+      margin-top: 15px;
+    }
+  }
+}
